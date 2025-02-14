@@ -150,9 +150,10 @@ button:hover {
 }
 
 .content .heart {
-    position: absolute;
-    /* Posicionar el boton en el centro de la pantalla */
-    top: 80%;
+    /* Posicionar flotante en la parte inferior de la pantalla */
+    position: fixed;
+    bottom: 10%;
+    bottom: 10%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 20vh;
