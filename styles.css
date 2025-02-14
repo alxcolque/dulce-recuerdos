@@ -152,8 +152,8 @@ button:hover {
 .content .heart {
     /* Posicionar flotante en la parte inferior de la pantalla */
     position: fixed;
-    top: 70%;
-    left: 50%;
+    top: 500px;
+    left: 200px;
     transform: translate(-50%, -50%);
     width: 20vh;
     height: 20vh;
