@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Dulce - San Valentín</title>
+    <!-- ico -->
+    <link rel="icon" href="public/img/shadowlove.jpg">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>¡Feliz San Valentín, Dulce!</h1>
+        <p id="description">Sigue los pasos para desbloquear nuestros recuerdos especiales.</p>
+        <!-- Pasos -->
+        <div id="steps">
+            <!-- Paso 1 -->
+            <div class="step" id="step1">
+                <h2>Paso 1: Escribe tu nombre</h2>
+                <input type="text" id="nameInput" placeholder="¿Quién eres?">
+                <button onclick="completeStep(1)">Siguiente</button>
+            </div>
+
+            <div class="content">
+                <button id="heartBtn" onclick="activeHearts()" class="heart">DULCE</button>
+            </div>
+            <!-- Paso 2 -->
+            <div class="step" id="step2" style="display:none;">
+                <h2>Paso 2: Responde esta pregunta</h2>
+                <p>¿Qué significa Dulce para mí?</p>
+                <!-- Seleccion multiple en radio -->
+                <div class="radio-group">
+                    <div class="radio-group-item">
+                        <input type="radio" id="answerInput" name="answerInput" value="Nada">
+                        <label for="answerInput">Nada</label>
+                    </div>
+                    <div class="radio-group-item">
+                        <input type="radio" id="answerInput" name="answerInput" value="Todo">
+                        <label for="answerInput">Todo</label>
+                    </div>
+                    <div class="radio-group-item">
+                        <input type="radio" id="answerInput" name="answerInput" value="Solo un recuerdo">
+                        <label for="answerInput">Solo un recuerdo</label>
+                    </div>
+                </div>
+                <button onclick="completeStep(2)">Siguiente</button>
+            </div>
+
+            <!-- Paso 3 -->
+            <div class="step" id="step3" style="display:none;">
+                <h2>Paso 3: Confirma tu amor</h2>
+                <p>¿Aceptas ser mi San Valentín?</p>
+                <img style="width: 100%;" src="public/img/shadowlove.jpg" alt="Shadow Love">
+                <button onclick="completeStep(3)">¡Sí, acepto!</button>
+                <button onclick="alert('¡Ok, váyase con su hombre!')">¡No!</button>
+            </div>
+            <!-- Paso 4 -->
+            <div class="step" id="step4" style="display:none;">
+                <!-- La dulce usa numero 8 para jugar futbol -->
+                <h2>Paso 4: Escribe el No. con la que juega fútbol la Dulce.</h2>
+                <input type="number" id="step4Input" placeholder="Tu respuesta">
+                <button onclick="completeStep(4)">¡Listo si fallas se acabaa!</button>
+            </div>
+
+        </div>
+        <video id="background-video"
+            style="opacity: 0.2; width: 100%; height: 100%; position: relative; top: 0; left: 0; z-index: -1;" autoplay
+            muted loop class="background-video">
+            <source src="public/video/344331858030903301.mp4" type="video/mp4">
+        </video>
+
+        <!-- Recuerdos desbloqueados -->
+        <div id="memories" style="display:none;">
+            <h2>Nuestros Recuerdos</h2>
+            <!-- Aqui se muestra un texto con el nombre de la dulce -->
+            <p>¡Gracias por ser mi San Valentín, Dulce! 💖</p>
+
+            <div class="gallery">
+                
+                <iframe src="https://drive.google.com/file/d/1SBi3smz7H7-gr3enmmrU7LZlbFN3AAjt/preview" width="640" height="480" allow="autoplay"></iframe>
+                <h2>Ganando juntos 💖 quiero que sigamos adelante</h2>
+                <img loading="lazy" width="100%" height="100%" src="public/img/win-together.png" alt="Recuerdo 3">
+                <h2>Recuerdo de los directos de tiktok</h2>
+                <div id="galleryItem"></div>
+            </div>
+
+            <!--  -->
+            <h2>¡Gracias por ser mi San Valentín, Dulce! 💖</h2>
+            <!-- Bonton para mostrar comiendo pollo -->
+            <button onclick="showMoreImages()">Ver el recuerdo de la entrada universitaria</button>
+            <div id="moreImages" style="display:none;">
+                <img loading="lazy" width="100%" height="100%" src="public/img/p1.png" alt="Recuerdo 3">
+                <img loading="lazy" width="100%" height="100%" src="public/img/p2.png" alt="Recuerdo 3">
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
