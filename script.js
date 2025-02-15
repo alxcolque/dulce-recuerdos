@@ -170,7 +170,7 @@ function handleGalleryImages() {
   /* las imagenes estan en una carpeta llamada public/ScreenDul tienen nombre de 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 */
   let i = 1;
   let cad = '';
-  for (let i = 1; i <= 10; i++) {
+  for (let i = 1; i <= 28; i++) {
     cad += '<img loading="lazy" width="100%" height="100%" src="public/ScreenDul/' + i + '.png" alt="Recuerdo ' + i + '">';
   }
   document.getElementById('galleryItem').innerHTML = cad;
